@@ -15,8 +15,9 @@ export default function Navbar() {
 			<div className="navigations">
 				<a href="#about">A propos</a>
 				<a href="#achievements">Réalisations</a>
-				<a href="#events">Évenements</a>
+				<a href="#career">parcours</a>
 				<a href="#skills">Compétences</a>
+				<a href="#comments">commentaires</a>
 				<button>
 					<BsTelephone size="34px" />
 				</button>
