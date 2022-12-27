@@ -40,22 +40,23 @@ export default function About() {
 						<DescriptiveButton
 							title={data.web.title}
 							id={data.web.id}
-							icon={<BsLaptop size="34" />}
+							icon={<BsLaptop size="25" />}
 						/>
 						<DescriptiveButton
 							title={data.mobile.title}
 							id={data.mobile.id}
-							icon={<BiMobileAlt size="34" />}
+							icon={<BiMobileAlt size="25" />}
 						/>
 						<DescriptiveButton
 							title={data.design.title}
 							id={data.design.id}
-							icon={<GiStickFrame size="34" />}
+							icon={<GiStickFrame size="25" />}
 						/>
 					</div>
 					<div className="about_descriptive_card">
-						<div>
+						<span>
 							{" "}
+							{`>   `}{" "}
 							{currentId === 0
 								? data.web.title
 								: currentId === 1
@@ -63,7 +64,7 @@ export default function About() {
 								: currentId === 2
 								? data.design.title
 								: null}{" "}
-						</div>
+						</span>
 						<div>
 							{" "}
 							{currentId === 0
@@ -75,7 +76,7 @@ export default function About() {
 								: null}{" "}
 						</div>
 						<sub>
-							{" "}
+							<strong> Technologies : </strong>
 							{currentId === 0
 								? data.web.skills
 								: currentId === 1

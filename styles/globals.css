@@ -6,6 +6,7 @@ body {
 	width: 100%;
 	font-size: 18px;
 	font-family: "Roboto", sans-serif;
+	font-weight: 300;
 }
 .navbar {
 	background-color: #d9d9d9;
@@ -89,10 +90,9 @@ body {
 	overflow: hidden;
 }
 .about_card {
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 20px;
 	background-color: #f5f5f5;
-	height: 445px;
+	height: 300px;
 	display: flex;
 	flex-direction: column;
 }
@@ -100,12 +100,6 @@ body {
 	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-}
-.about_details > div {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
 }
 .descriptive_button {
 	border: 2px solid #1e736e;
@@ -117,24 +111,37 @@ body {
 }
 .descriptive_icon {
 	background-color: #1e736e;
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	margin: 10px;
 	border-radius: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-/* .descriptive_button_card {
+.descriptive_button_card {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-} */
+	/* align-items: center; */
+}
 .active-descriptive_button_card {
 	background-color: #1e736e;
 }
 .active-descriptive_button_card > .descriptive_icon {
 	background-color: white;
+}
+.about_descriptive_card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.about_descriptive_card > div {
+	margin-top: 10px;
+	height: 100%;
+}
+.about_descriptive_card > span {
+	font-weight: 500;
+	color: #f55a1b;
 }
