@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
 import Main from "../components/main";
 import About from "../components/about";
+import Skills from "../components/skills";
+import Achievement from "../components/achievement";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,7 @@ export default function Home() {
 					<Main />
 				</header>
 				<About />
+				<Achievement />
 			</main>
 		</>
 	);

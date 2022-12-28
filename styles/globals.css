@@ -8,6 +8,15 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 }
+.strong {
+	font-weight: 500;
+}
+.blue_color {
+	color: #123853;
+}
+.orange_color {
+	color: #f55a1b;
+}
 .navbar {
 	background-color: #d9d9d9;
 	width: 100%;
@@ -92,7 +101,8 @@ body {
 .about_card {
 	padding: 20px;
 	background-color: #f5f5f5;
-	height: 300px;
+	min-height: 300px;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
 }
@@ -103,7 +113,7 @@ body {
 }
 .descriptive_button {
 	border: 2px solid #1e736e;
-	width: 390px;
+	width: 350px;
 	height: fit-content;
 	border-radius: 5px;
 	display: flex;
@@ -121,16 +131,21 @@ body {
 }
 .descriptive_button_card {
 	height: 100%;
+	margin: 10px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/* align-items: center; */
+}
+.descriptive_icon {
+	color: #fff;
 }
 .active-descriptive_button_card {
 	background-color: #1e736e;
+	color: white;
 }
 .active-descriptive_button_card > .descriptive_icon {
 	background-color: white;
+	color: #1e736e;
 }
 .about_descriptive_card {
 	display: flex;
@@ -144,4 +159,33 @@ body {
 .about_descriptive_card > span {
 	font-weight: 500;
 	color: #f55a1b;
+}
+.achievement_card {
+	width: 500px;
+	height: auto;
+	border: 1px solid #123853;
+	padding: 15px;
+	display: flex;
+}
+.achievement_img {
+	border: 1px solid #123853;
+	border-radius: 5px;
+	height: 184px;
+	width: 184px;
+}
+.achievement_description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.achievement_description > a {
+	color: #123853;
+}
+.achievement_description > a:visited {
+	color: #f55a1b;
+}
+.repo_card{
+	border: 1px solid #123853;
+	height: fit-content;
+	width: fit-content;
 }

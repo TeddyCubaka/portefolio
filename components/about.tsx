@@ -1,17 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { ReactElement, useContext, useState } from "react";
 import { BsLaptop } from "react-icons/bs";
 import { BiMobileAlt } from "react-icons/bi";
-import { GiStickFrame } from "react-icons/gi";
-import PropTypes, { InferProps } from "prop-types";
+import { MdDesignServices } from "react-icons/md";
 import data from "../datas/about.json";
 import currentIdContext from "../context/aboutContext";
 
-function DescriptiveButton({
-	icon,
-	title,
-	color,
-	id,
-}: InferProps<typeof DescriptiveButton.propTypes>) {
+export interface LocalProps {
+	icon: ReactElement;
+	title: string;
+	id: number;
+}
+
+function DescriptiveButton({ icon, title, id }: LocalProps) {
 	const { currentId, setCurrentId } = useContext(currentIdContext);
 	return (
 		<div
@@ -33,7 +33,7 @@ export default function About() {
 	const [currentId, setCurrentId] = useState(0);
 	return (
 		<currentIdContext.Provider value={{ currentId, setCurrentId }}>
-			<div className="about_card" id="about">
+			<section className="about_card" id="about">
 				<h2>Que fait Teddy ?</h2>
 				<div className="about_details">
 					<div className="descriptive_button_card">
@@ -50,7 +50,7 @@ export default function About() {
 						<DescriptiveButton
 							title={data.design.title}
 							id={data.design.id}
-							icon={<GiStickFrame size="25" />}
+							icon={<MdDesignServices size="25" />}
 						/>
 					</div>
 					<div className="about_descriptive_card">
@@ -87,14 +87,7 @@ export default function About() {
 						</sub>
 					</div>
 				</div>
-			</div>
+			</section>
 		</currentIdContext.Provider>
 	);
 }
-
-DescriptiveButton.propTypes = {
-	icon: PropTypes.element,
-	title: PropTypes.string,
-	color: PropTypes.string,
-	id: PropTypes.number,
-};
