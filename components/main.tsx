@@ -15,8 +15,14 @@ export default function Main() {
 			<h1>Teddy Cubaka BIRHINGINGWA</h1>
 			<div>Développeur fullstack</div>
 			<div className="main_icons">
-				<BsGithub size="30" />
-				<BsLinkedin size="30" />
+				<a href="https://github.com/TeddyCubaka">
+					{" "}
+					<BsGithub size="30" />{" "}
+				</a>
+				<a href="https://www.linkedin.com/in/teddy-birhingingwa-a3707a240/">
+					{" "}
+					<BsLinkedin size="30" />{" "}
+				</a>
 			</div>
 		</main>
 	);
