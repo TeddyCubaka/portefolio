@@ -25,7 +25,14 @@ export default function Achievement() {
 	let [newRepos, setNewRepos] = useState<LocalProps[]>([]);
 
 	useEffect(() => {
-		axios("https://api.github.com/users/TeddyCubaka/repos")
+		axios({
+			method: "get",
+			url: "https://api.github.com/users/TeddyCubaka/repos",
+			headers: {
+				Authorization:
+					"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",
+			},
+		})
 			.then((response) => {
 				let repos: LocalProps[] = [];
 				setTrigger(1);
