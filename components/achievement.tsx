@@ -21,8 +21,6 @@ export interface LocalLanguageType {
 
 export default function Achievement() {
 	const [repos, setRepos] = useState<LocalProps[]>([]);
-	const [trigger, setTrigger] = useState<number>(0);
-	let [newRepos, setNewRepos] = useState<LocalProps[]>([]);
 
 	useEffect(() => {
 		axios({
@@ -30,12 +28,11 @@ export default function Achievement() {
 			url: "https://api.github.com/users/TeddyCubaka/repos",
 			headers: {
 				Authorization:
-					"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",
+					"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",
 			},
 		})
 			.then((response) => {
 				let repos: LocalProps[] = [];
-				setTrigger(1);
 				response.data.map((data: any) => {
 					repos.push({
 						name: data.name,
@@ -49,51 +46,98 @@ export default function Achievement() {
 						languages_url: data.languages_url,
 					});
 				});
+				repos = repos.filter(
+					(repo) => repo.description !== null && repo.language !== null
+				);
 				setRepos(repos);
 			})
 			.catch((error) => console.log(error));
-	}, [repos]);
+	}, [repos.length]);
 
-	useEffect(() => {
-		if (repos.length > 0) {
-			repos.map((repo) => {
-				axios(repo.languages_url)
-					.then((data) => {
-						let lang: string = "";
-						Object.keys(data.data).map((language) => {
-							repo.language = lang;
-							lang += language + " ";
-						});
-						setNewRepos((prev) => [...prev, repo]);
-						setRepos(newRepos);
-					})
-					.catch((err) => console.log(err));
-			});
-		}
-	}, [trigger]);
+	interface HandelDescriptionLengthProps {
+		string: string;
+	}
+
+	function HandelDescriptionLength({ string }: HandelDescriptionLengthProps) {
+		const [buttonState, setButtonState] = useState(false);
+
+		return string.length < 47 ? (
+			<span>{string}</span>
+		) : buttonState === false ? (
+			<span className="sapce_between_row max_width">
+				{string.substring(0, 40) + "..."}
+				<button onClick={() => setButtonState(true)}>Plus</button>
+			</span>
+		) : (
+			<span className="sapce_between_row max_width">
+				{" "}
+				{string} <button onClick={() => setButtonState(false)}>cacher</button>{" "}
+			</span>
+		);
+	}
+
+	interface GetLanguagesProps {
+		url: string;
+		defaultLanguage: string;
+	}
+
+	function GetLanguages({ url, defaultLanguage }: GetLanguagesProps) {
+		const [languages, setLanguages] = useState<string>(defaultLanguage);
+		axios({
+			method: "get",
+			url: url,
+			headers: {
+				Authorization:
+					"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",
+			},
+		})
+			.then((data) => {
+				let lang: string = "";
+				Object.keys(data.data).map((language) => {
+					lang += language + " ";
+				});
+				setLanguages(lang);
+			})
+			.catch((err) => setLanguages(defaultLanguage));
+
+		return <span> {languages} </span>;
+	}
 
 	return (
 		<section id="achievements">
 			<h2>Qu`apos`a déjà fait Teddy ?</h2>
 			{/* <AchievementCard /> */}
-			<div>
+			<div className="achievement_block">
 				{repos.length === 0
 					? "Nous appellons des données vers Github"
-					: repos.map((repo, index) => (
-							<ul key={repo.id} className="repo_card">
-								<div className="strong">
-									<a href={repo.html_url}> {repo.name} </a>
-								</div>
-								<div> {repo.description} </div>
-								<div className="sub_info_repo_card small">
-									<div>
-										{" "}
-										<b>language</b> {repo.language}
+					: repos.map((repo) =>
+							repo.description !== null ? (
+								<div key={repo.id} className="repo_card">
+									<div className="strong">
+										<a href={repo.html_url} target="_blank">
+											{" "}
+											{repo.name}{" "}
+										</a>
 									</div>
-									<div> {repo.created_at} </div>
+									<div>
+										<HandelDescriptionLength string={repo.description} />
+									</div>
+									<div className="sub_info_repo_card small">
+										<div>
+											{" "}
+											<b>languages : </b>{" "}
+											<GetLanguages
+												url={repo.languages_url}
+												defaultLanguage={repo.language}
+											/>
+										</div>
+										<div>
+											crée le {new Date(repo.created_at).toLocaleDateString()}{" "}
+										</div>
+									</div>
 								</div>
-							</ul>
-					  ))}
+							) : null
+					  )}
 			</div>
 		</section>
 	);

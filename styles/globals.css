@@ -20,6 +20,19 @@ body {
 .orange_color {
 	color: #f55a1b;
 }
+.width_max {
+	width: 100%;
+}
+.sapce_between_row {
+	display: flex;
+	justify-content: space-between;
+}
+a {
+	color: #123853;
+}
+a:visited {
+	color: #f55a1b;
+}
 .navbar {
 	background-color: #d9d9d9;
 	width: 100%;
@@ -188,11 +201,23 @@ body {
 	color: #f55a1b;
 }
 .repo_card {
-	border: 1px solid #123853;
 	height: fit-content;
 	width: 400px;
+	padding: 15px;
+	margin: 10px;
+	border: 1px solid #123853;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0.5rem;
 }
 .sub_info_repo_card {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
+}
+.achievement_block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
