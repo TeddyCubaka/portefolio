@@ -6,6 +6,7 @@ import Main from "../components/main";
 import About from "../components/about";
 import Skills from "../components/skills";
 import Achievement from "../components/achievement";
+import Career from "../components/career";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
 				</header>
 				<About />
 				<Achievement />
+				<Career />
 				<Skills />
 			</main>
 		</>
