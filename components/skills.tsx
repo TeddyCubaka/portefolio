@@ -1,3 +1,3 @@
 export default function Skills() {
-	return <h2>Here'll skills</h2>;
+	return <h2>Here `apos` ll skills</h2>;
 }

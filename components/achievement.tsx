@@ -67,7 +67,7 @@ export default function Achievement() {
 
 	return (
 		<section id="achievements">
-			<h2>Qu'a déjà fait Teddy ?</h2>
+			<h2>Qu`apos`a déjà fait Teddy ?</h2>
 			{/* <AchievementCard /> */}
 			<div>
 				{repos.length === 0

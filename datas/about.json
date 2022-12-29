@@ -3,21 +3,21 @@
 		"id": 0,
 		"icon": "BsLaptop",
 		"title": "Développement web",
-		"description": "Dans le dévéloppement web, Teddy fait généralement du JavaCript. A ceci s'ajoute le typescript et le PHP. Bien-sûr, il ne fait pas que coder. Il fait aussi le suivi du projet et son élaboration. Il va de la modélisation du susytème à mise en ligne du système. Il peut aussi faire la maintenace d'une application web. Il plusieur technologie et veut en apprendre plusieur encore. Dans la conception, Teddy peut faire les deux partie d'un site web, la partie client et la partie serveur.",
+		"description": "Dans le dévéloppement web, Teddy fait généralement du JavaCript. A ceci s`apos`ajoute le typescript et le PHP. Bien-sûr, il ne fait pas que coder. Il fait aussi le suivi du projet et son élaboration. Il va de la modélisation du susytème à mise en ligne du système. Il peut aussi faire la maintenace d`apos`une application web. Il plusieur technologie et veut en apprendre plusieur encore. Dans la conception, Teddy peut faire les deux partie d`apos`un site web, la partie client et la partie serveur.",
 		"skills": "HTML, CSS, JavaScript, typescript, PHP, React.js, next.js, node.js, express.js, socket.io, passport.js"
 	},
 	"mobile": {
 		"id": 1,
 		"icon": "BiMobileAlt",
 		"title": "Développement mobile",
-		"description": "Tout comme pour le web, Teddy fait la conception d'un système mobile. Il peut étudier, modéliser et concevoir le système. Et bien-sûr il peut aussi faire la maintenance.",
+		"description": "Tout comme pour le web, Teddy fait la conception d`apos`un système mobile. Il peut étudier, modéliser et concevoir le système. Et bien-sûr il peut aussi faire la maintenance.",
 		"skills": "React Native"
 	},
 	"design": {
 		"id": 2,
 		"icon": "GiStickFrame",
 		"title": "Modélisation et Design d un site",
-		"description": "Rare sont les développeurs avec un goût du design. Teddy, justement en a. Il a une passion pour les codes et pour le design. Mais que vaut un système sans une bonne modélisation, rien. Teddy vous fait tout. Il modélise votre système d'une manière optimale et ainsi vous pourriez utiliser votre système pendant longtemps.",
+		"description": "Rare sont les développeurs avec un goût du design. Teddy, justement en a. Il a une passion pour les codes et pour le design. Mais que vaut un système sans une bonne modélisation, rien. Teddy vous fait tout. Il modélise votre système d`apos`une manière optimale et ainsi vous pourriez utiliser votre système pendant longtemps.",
 		"skills": "Figma, canva, asana, google tools, UML, Adobe illustrator et photoshop, inkscape, etc..."
 	}
 }
