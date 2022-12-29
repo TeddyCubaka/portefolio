@@ -135,7 +135,7 @@ const skills: LocalData[] = [
 	},
 	{
 		name: "Ms Word",
-		icon: SiFigma,
+		icon: SiMicrosoftword,
 		color: "#1B5EBE",
 	},
 	{

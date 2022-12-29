@@ -1,7 +1,5 @@
-import { Octokit } from "@octokit/rest";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import AchievementCard from "./achievementCard";
 
 export interface LocalProps {
 	name: string;
@@ -26,7 +24,7 @@ interface HandelDescriptionLengthProps {
 function HandelDescriptionLength({ string }: HandelDescriptionLengthProps) {
 	const [buttonState, setButtonState] = useState(false);
 
-	return string.length < 47 ? (
+	return string.length < 45 ? (
 		<span>{string}</span>
 	) : buttonState === false ? (
 		<span className="sapce_between_row max_width">
@@ -107,7 +105,6 @@ export default function Achievement() {
 	return (
 		<section id="achievements">
 			<h2>Qu`apos`a déjà fait Teddy ?</h2>
-			{/* <AchievementCard /> */}
 			<div className="achievement_block">
 				{repos.length === 0
 					? "Nous appellons des données vers Github"

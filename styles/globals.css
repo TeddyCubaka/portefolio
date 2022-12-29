@@ -33,12 +33,15 @@ a {
 a:visited {
 	color: #f55a1b;
 }
+section{
+	padding: 20px;
+}
 .navbar {
 	background-color: #d9d9d9;
 	width: 100%;
 	height: 15vh;
 	color: #123853;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	display: flex;
 	justify-content: space-between;
@@ -99,7 +102,6 @@ a:visited {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	margin-top: 15vh;
 }
 .main_icons {
 	width: 100px;
@@ -202,9 +204,9 @@ a:visited {
 }
 .repo_card {
 	height: fit-content;
-	width: 400px;
+	width: 390px;
 	padding: 15px;
-	margin: 10px;
+	margin: 15px 0;
 	border: 1px solid #123853;
 	border-radius: 5px;
 	display: grid;
@@ -219,7 +221,8 @@ a:visited {
 .achievement_block {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 }
 .skill_card {
 	width: 120px;

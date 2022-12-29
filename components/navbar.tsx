@@ -2,10 +2,6 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { BsTelephone } from "react-icons/bs";
 
-function isActive() {
-	console.log(location.hash);
-}
-
 export default function Navbar() {
 	const router = useRouter();
 

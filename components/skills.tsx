@@ -17,13 +17,13 @@ function Skill({ name, Icon, color }: LocalProps) {
 
 export default function Skills() {
 	return (
-		<div>
+		<section id="skills">
 			<h2>Voici ce que peut faire Teddy</h2>
 			<div className="skills_section">
 				{skills.map((data) => (
 					<Skill name={data.name} color={data.color} Icon={data.icon} />
 				))}
 			</div>
-		</div>
+		</section>
 	);
 }

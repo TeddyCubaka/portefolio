@@ -31,7 +31,8 @@ export default function Career() {
 
 	return (
 		<careerContext.Provider value={{ currentCareerId, setCurrentCareerId }}>
-			<section className="about_card" id="about">
+			<section className="about_card" id="career">
+				<span></span>
 				<h2>Que fait Teddy ?</h2>
 				<div className="about_details">
 					<div className="descriptive_button_card">
