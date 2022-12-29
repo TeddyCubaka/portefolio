@@ -81,7 +81,7 @@ export default function Achievement() {
 								<div className="sub_info_repo_card small">
 									<div>
 										{" "}
-										<br>language</br> {repo.language}
+										<b>language</b> {repo.language}
 									</div>
 									<div> {repo.created_at} </div>
 								</div>
