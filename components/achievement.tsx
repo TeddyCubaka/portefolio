@@ -78,8 +78,11 @@ export default function Achievement() {
 									<a href={repo.html_url}> {repo.name} </a>
 								</div>
 								<div> {repo.description} </div>
-								<div>
-									<div>{repo.language}</div>
+								<div className="sub_info_repo_card small">
+									<div>
+										{" "}
+										<br>language</br> {repo.language}
+									</div>
 									<div> {repo.created_at} </div>
 								</div>
 							</ul>

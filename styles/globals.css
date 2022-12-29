@@ -11,6 +11,9 @@ body {
 .strong {
 	font-weight: 500;
 }
+.small {
+	font-size: small;
+}
 .blue_color {
 	color: #123853;
 }
@@ -184,8 +187,12 @@ body {
 .achievement_description > a:visited {
 	color: #f55a1b;
 }
-.repo_card{
+.repo_card {
 	border: 1px solid #123853;
 	height: fit-content;
-	width: fit-content;
+	width: 400px;
+}
+.sub_info_repo_card {
+	display: flex;
+	justify-content: space-between;
 }
