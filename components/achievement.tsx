@@ -19,8 +19,58 @@ export interface LocalLanguageType {
 	index: number;
 }
 
+interface HandelDescriptionLengthProps {
+	string: string;
+}
+
+function HandelDescriptionLength({ string }: HandelDescriptionLengthProps) {
+	const [buttonState, setButtonState] = useState(false);
+
+	return string.length < 47 ? (
+		<span>{string}</span>
+	) : buttonState === false ? (
+		<span className="sapce_between_row max_width">
+			{string.substring(0, 40) + "..."}
+			<button onClick={() => setButtonState(true)}>Plus</button>
+		</span>
+	) : (
+		<span className="sapce_between_row max_width">
+			{" "}
+			{string} <button onClick={() => setButtonState(false)}>cacher</button>{" "}
+		</span>
+	);
+}
+
+interface GetLanguagesProps {
+	url: string;
+	defaultLanguage: string;
+}
+
+function GetLanguages({ url, defaultLanguage }: GetLanguagesProps) {
+	const [languages, setLanguages] = useState<string>(defaultLanguage);
+	axios({
+		method: "get",
+		url: url,
+		headers: {
+			Authorization:
+				"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",
+		},
+	})
+		.then((data) => {
+			let lang: string = "";
+			Object.keys(data.data).map((language) => {
+				lang += language + " ";
+			});
+			setLanguages(lang);
+		})
+		.catch((err) => setLanguages(defaultLanguage));
+
+	return <span> {languages} </span>;
+}
+
 export default function Achievement() {
 	const [repos, setRepos] = useState<LocalProps[]>([]);
+	const [repoLink, setRepoLink] = useState<string>("#");
 
 	useEffect(() => {
 		axios({
@@ -54,55 +104,6 @@ export default function Achievement() {
 			.catch((error) => console.log(error));
 	}, [repos.length]);
 
-	interface HandelDescriptionLengthProps {
-		string: string;
-	}
-
-	function HandelDescriptionLength({ string }: HandelDescriptionLengthProps) {
-		const [buttonState, setButtonState] = useState(false);
-
-		return string.length < 47 ? (
-			<span>{string}</span>
-		) : buttonState === false ? (
-			<span className="sapce_between_row max_width">
-				{string.substring(0, 40) + "..."}
-				<button onClick={() => setButtonState(true)}>Plus</button>
-			</span>
-		) : (
-			<span className="sapce_between_row max_width">
-				{" "}
-				{string} <button onClick={() => setButtonState(false)}>cacher</button>{" "}
-			</span>
-		);
-	}
-
-	interface GetLanguagesProps {
-		url: string;
-		defaultLanguage: string;
-	}
-
-	function GetLanguages({ url, defaultLanguage }: GetLanguagesProps) {
-		const [languages, setLanguages] = useState<string>(defaultLanguage);
-		axios({
-			method: "get",
-			url: url,
-			headers: {
-				Authorization:
-					"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",
-			},
-		})
-			.then((data) => {
-				let lang: string = "";
-				Object.keys(data.data).map((language) => {
-					lang += language + " ";
-				});
-				setLanguages(lang);
-			})
-			.catch((err) => setLanguages(defaultLanguage));
-
-		return <span> {languages} </span>;
-	}
-
 	return (
 		<section id="achievements">
 			<h2>Qu`apos`a déjà fait Teddy ?</h2>
@@ -114,7 +115,21 @@ export default function Achievement() {
 							repo.description !== null ? (
 								<div key={repo.id} className="repo_card">
 									<div className="strong">
-										<a href={repo.html_url} target="_blank">
+										<a
+											href={repoLink}
+											target="_blank"
+											onClick={() => {
+												setRepoLink("");
+												if (
+													prompt(
+														"Vous serez redirigé vers le repo github de Teddy" +
+															repo.html_url,
+														"oui"
+													)
+												) {
+													setRepoLink(repo.html_url);
+												}
+											}}>
 											{" "}
 											{repo.name}{" "}
 										</a>

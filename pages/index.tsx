@@ -25,6 +25,7 @@ export default function Home() {
 				</header>
 				<About />
 				<Achievement />
+				<Skills />
 			</main>
 		</>
 	);
