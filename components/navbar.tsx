@@ -19,15 +19,15 @@ const Media = () => {
 
 	return (
 		<nav className={buttonClass}>
-			<button
+			<div
 				onClick={() => {
 					if (buttonClass === "navigations_mobile") {
 						setButtonClass(buttonClass + " " + "navigations_mobile_focus");
 					}
 				}}>
-				<span>
+				<div>
 					<BiMenu size="40" />
-				</span>
+				</div>
 				<p onClick={() => setButtonClass("navigations_mobile")}></p>
 				<div className="sidebar">
 					<div
@@ -87,7 +87,7 @@ const Media = () => {
 						</button>
 					</div>
 				</div>
-			</button>
+			</div>
 		</nav>
 	);
 };
