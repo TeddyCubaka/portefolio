@@ -72,7 +72,7 @@ export default function Achievement() {
 
 	return (
 		<section id="achievements">
-			<h2>Qu`apos`a déjà fait Teddy ?</h2>
+			<h2>Qu&#39;a déjà fait Teddy ?</h2>
 			<div className="achievement_block">
 				{repositories.length === 0
 					? "Nous appellons des données vers Github"
@@ -83,6 +83,7 @@ export default function Achievement() {
 										<a
 											href={repoLink}
 											target="_blank"
+											rel="noreferrer"
 											onClick={() => {
 												setRepoLink("");
 												if (
