@@ -7,16 +7,27 @@
 		font-family: "Roboto", sans-serif;
 		font-weight: 300;
 	}
+	.strong {
+		font-weight: 400;
+		font-size: 14px;
+	}
 	.navbar {
 		height: 70px;
+		z-index: 5;
 	}
 	.navbar > h1 {
 		margin-left: 10px;
 		font-size: 20px;
 	}
+	.hide_on_mobile {
+		display: none;
+	}
+	.hide_on_desktop {
+		display: inline;
+	}
 	.navigations {
 		display: none;
-        margin-right: 20px;
+		margin-right: 20px;
 	}
 	.navigations_mobile {
 		display: flex;
@@ -69,5 +80,57 @@
 		height: 40px;
 		text-align: right;
 		margin: 10px 10px 0 0;
+	}
+	.about_card {
+		padding: 20px;
+		min-height: 200px;
+	}
+	.about_details {
+		height: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.descriptive_button {
+		border-radius: 3px;
+		width: fit-content;
+		padding: 0 10px 0 0;
+		border: 1px solid #1e736e;
+		position: sticky;
+		top: 80px;
+		z-index: 1;
+	}
+	.descriptive_icon {
+		height: 25px;
+		margin: 0 10px 0 0;
+		border-radius: 3px;
+	}
+	.descriptive_icon > svg {
+		width: 20px;
+	}
+	.descriptive_button_card {
+		height: 100%;
+		margin: 10px 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.descriptive_icon {
+		color: #fff;
+	}
+	.active-descriptive_button_card {
+		background-color: #1e736e;
+		color: white;
+	}
+	.active-descriptive_button_card > .descriptive_icon {
+		background-color: white;
+		color: #1e736e;
+	}
+	.skill_card {
+		width: 90px;
+		height: 90px;
+		margin: 10px;
+	}
+	.skill_card > svg {
+		width: 30px;
 	}
 }

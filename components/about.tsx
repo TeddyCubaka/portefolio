@@ -9,9 +9,10 @@ export interface LocalProps {
 	icon: ReactElement;
 	title: string;
 	id: number;
+	mobileTitle: string;
 }
 
-function DescriptiveButton({ icon, title, id }: LocalProps) {
+function DescriptiveButton({ icon, title, id, mobileTitle }: LocalProps) {
 	const { currentId, setCurrentId } = useContext(currentIdContext);
 	return (
 		<div
@@ -24,7 +25,8 @@ function DescriptiveButton({ icon, title, id }: LocalProps) {
 				setCurrentId(id);
 			}}>
 			<div className="descriptive_icon">{icon}</div>
-			<div className="strong"> {title} </div>
+			<div className="strong hide_on_mobile"> {title} </div>
+			<div className="strong hide_on_desktop"> {mobileTitle} </div>
 		</div>
 	);
 }
@@ -41,16 +43,19 @@ export default function About() {
 							title={data.web.title}
 							id={data.web.id}
 							icon={<BsLaptop size="25" />}
+							mobileTitle={data.web.mobileTitle}
 						/>
 						<DescriptiveButton
 							title={data.mobile.title}
 							id={data.mobile.id}
 							icon={<BiMobileAlt size="25" />}
+							mobileTitle={data.mobile.mobileTitle}
 						/>
 						<DescriptiveButton
 							title={data.design.title}
 							id={data.design.id}
 							icon={<MdDesignServices size="25" />}
+							mobileTitle={data.design.mobileTitle}
 						/>
 					</div>
 					<div className="about_descriptive_card">

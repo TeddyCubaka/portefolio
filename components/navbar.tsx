@@ -18,7 +18,7 @@ const Media = () => {
 	});
 
 	return (
-		<nav className={buttonClass}>
+		<div className={buttonClass}>
 			<div
 				onClick={() => {
 					if (buttonClass === "navigations_mobile") {
@@ -88,7 +88,7 @@ const Media = () => {
 					</div>
 				</div>
 			</div>
-		</nav>
+		</div>
 	);
 };
 

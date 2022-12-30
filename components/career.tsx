@@ -6,9 +6,10 @@ export interface LocalProps {
 	icon: ReactElement;
 	title: string;
 	id: number;
+	mobileTitle: string;
 }
 
-function DescriptiveButton({ icon, title, id }: LocalProps) {
+function DescriptiveButton({ icon, title, id, mobileTitle }: LocalProps) {
 	const career = useContext(careerContext);
 	return (
 		<div
@@ -21,7 +22,8 @@ function DescriptiveButton({ icon, title, id }: LocalProps) {
 				career.setCurrentCareerId(id);
 			}}>
 			<div className="descriptive_icon">{icon}</div>
-			<div className="strong"> {title} </div>
+			<div className="strong hide_on_mobile"> {title} </div>
+			<div className="strong hide_on_desktop"> {mobileTitle} </div>
 		</div>
 	);
 }
@@ -42,6 +44,7 @@ export default function Career() {
 								title={data.name}
 								id={data.id}
 								key={data.id}
+								mobileTitle={data.mobileName}
 							/>
 						))}
 					</div>
