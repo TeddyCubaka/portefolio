@@ -1,5 +1,7 @@
+import { Octokit } from "@octokit/rest";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import repositories from "../datas/repos.json";
 
 export interface LocalProps {
 	name: string;
@@ -46,69 +48,35 @@ interface GetLanguagesProps {
 
 function GetLanguages({ url, defaultLanguage }: GetLanguagesProps) {
 	const [languages, setLanguages] = useState<string>(defaultLanguage);
-	axios({
-		method: "get",
-		url: url,
-		headers: {
-			Authorization:
-				"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",
-		},
-	})
-		.then((data) => {
+
+	const octokit = new Octokit({
+		auth: "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",
+	});
+
+	octokit
+		.request("GET " + url.split("https://api.github.com")[1], {})
+		.then((res) => {
 			let lang: string = "";
-			Object.keys(data.data).map((language) => {
+			Object.keys(res.data).map((language) => {
 				lang += language + " ";
 			});
 			setLanguages(lang);
 		})
-		.catch((err) => setLanguages(defaultLanguage));
+		.catch((err) => console.log(err));
 
 	return <span> {languages} </span>;
 }
 
 export default function Achievement() {
-	const [repos, setRepos] = useState<LocalProps[]>([]);
 	const [repoLink, setRepoLink] = useState<string>("#");
-
-	useEffect(() => {
-		axios({
-			method: "get",
-			url: "https://api.github.com/users/TeddyCubaka/repos",
-			headers: {
-				Authorization:
-					"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",
-			},
-		})
-			.then((response) => {
-				let repos: LocalProps[] = [];
-				response.data.map((data: any) => {
-					repos.push({
-						name: data.name,
-						created_at: data.created_at,
-						description: data.description,
-						full_name: data.full_name,
-						id: data.id,
-						language: data.language,
-						pushed_at: data.pushed_at,
-						html_url: data.html_url,
-						languages_url: data.languages_url,
-					});
-				});
-				repos = repos.filter(
-					(repo) => repo.description !== null && repo.language !== null
-				);
-				setRepos(repos);
-			})
-			.catch((error) => console.log(error));
-	}, [repos.length]);
 
 	return (
 		<section id="achievements">
 			<h2>Qu`apos`a déjà fait Teddy ?</h2>
 			<div className="achievement_block">
-				{repos.length === 0
+				{repositories.length === 0
 					? "Nous appellons des données vers Github"
-					: repos.map((repo) =>
+					: repositories.map((repo) =>
 							repo.description !== null ? (
 								<div key={repo.id} className="repo_card">
 									<div className="strong">
@@ -140,7 +108,7 @@ export default function Achievement() {
 											<b>languages : </b>{" "}
 											<GetLanguages
 												url={repo.languages_url}
-												defaultLanguage={repo.language}
+												defaultLanguage={repo.language ? repo.language : "_"}
 											/>
 										</div>
 										<div>

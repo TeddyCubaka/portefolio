@@ -41,6 +41,7 @@ export default function Career() {
 								icon={<data.icon />}
 								title={data.name}
 								id={data.id}
+								key={data.id}
 							/>
 						))}
 					</div>

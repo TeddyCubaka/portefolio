@@ -23,6 +23,9 @@ body {
 .width_max {
 	width: 100%;
 }
+.hide {
+	display: none;
+}
 .sapce_between_row {
 	display: flex;
 	justify-content: space-between;
@@ -33,7 +36,7 @@ a {
 a:visited {
 	color: #f55a1b;
 }
-section{
+section {
 	padding: 20px;
 }
 .navbar {
@@ -51,12 +54,12 @@ section{
 	margin-left: 20px;
 	font-size: 30px;
 }
-.navbar > div {
+.navigations {
 	margin-right: 20px;
 	display: flex;
 	align-items: center;
 }
-.navbar > div > button {
+.navigations > button {
 	background-color: white;
 	height: 54px;
 	width: 54px;
@@ -65,8 +68,11 @@ section{
 	justify-content: center;
 	align-items: center;
 }
-.navbar > div > button > svg {
+.navigations > button > svg {
 	margin: auto;
+}
+.navigations_mobile {
+	display: none;
 }
 .navigations > a {
 	text-decoration: none;

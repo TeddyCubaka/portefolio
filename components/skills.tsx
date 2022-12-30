@@ -20,8 +20,13 @@ export default function Skills() {
 		<section id="skills">
 			<h2>Voici ce que peut faire Teddy</h2>
 			<div className="skills_section">
-				{skills.map((data) => (
-					<Skill name={data.name} color={data.color} Icon={data.icon} />
+				{skills.map((data, index) => (
+					<Skill
+						name={data.name}
+						color={data.color}
+						Icon={data.icon}
+						key={index}
+					/>
 				))}
 			</div>
 		</section>
