@@ -104,11 +104,6 @@ const skills: LocalData[] = [
 		color: "#f34f29",
 	},
 	{
-		name: "Github",
-		icon: BsGithub,
-		color: "#000000",
-	},
-	{
 		name: "MySQL",
 		icon: SiMysql,
 		color: "#667ef4",

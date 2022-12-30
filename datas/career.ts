@@ -16,7 +16,7 @@ const careerArray: LocalDataType[] = [
 		name: "Scolaire",
 		icon: TbSchoolOff,
 		content:
-			"Teddy a fait ses études humanitaire au collège saint Paul Bukavu, au Sud-Kivu. Il finit en mathématique-physique avec un diplôme de 60%. Après avoir obtenu son diplôme d&#39;État, Teddy est venu à Kinshasa pour poursuivre ses études supérieurs. Il a commencé en BTP, avant de tomber de découvrir et de tomber amoureux de la programmation. Une année après son arrivé à kinshasa il a changé de faculté et s'est lancé dans le dévéloppement web.",
+			"Teddy a fait ses études humanitaire au collège saint Paul Bukavu, au Sud-Kivu. Il finit en mathématique-physique avec un diplôme de 60%. Après avoir obtenu son diplôme d'État, Teddy est venu à Kinshasa pour poursuivre ses études supérieurs. Il a commencé en BTP, avant de tomber de découvrir et de tomber amoureux de la programmation. Une année après son arrivé à kinshasa il a changé de faculté et s'est lancé dans le dévéloppement web.",
 		mobileName: "Scol",
 	},
 	{
