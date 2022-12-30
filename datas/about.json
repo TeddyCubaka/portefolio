@@ -3,7 +3,7 @@
 		"id": 0,
 		"icon": "BsLaptop",
 		"title": "Développement web",
-		"description": "Dans le dévéloppement web, Teddy fait généralement du JavaCript. A ceci s&#apos;ajoute le typescript et le PHP. Bien-sûr, il ne fait pas que coder. Il fait aussi le suivi du projet et son élaboration. Il va de la modélisation du susytème à mise en ligne du système. Il peut aussi faire la maintenace d`apos`une application web. Il plusieur technologie et veut en apprendre plusieur encore. Dans la conception, Teddy peut faire les deux partie d`apos`un site web, la partie client et la partie serveur.",
+		"description": "Dans le dévéloppement web, Teddy fait généralement du JavaCript. A ceci s'ajoute le typescript et le PHP. Bien-sûr, il ne fait pas que coder. Il fait aussi le suivi du projet et son élaboration. Il va de la modélisation du susytème à mise en ligne du système. Il peut aussi faire la maintenace d`apos`une application web. Il plusieur technologie et veut en apprendre plusieur encore. Dans la conception, Teddy peut faire les deux partie d'un site web, la partie client et la partie serveur.",
 		"skills": "HTML, CSS, JavaScript, typescript, PHP, React.js, next.js, node.js, express.js, socket.io, passport.js",
 		"mobileTitle": "Dév Web"
 	},
