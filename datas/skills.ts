@@ -23,6 +23,7 @@ import {
 	SiGoogle,
 	SiLinux,
 	SiUbuntu,
+	SiCanva,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -97,6 +98,11 @@ const skills: LocalData[] = [
 		name: "Figma",
 		icon: SiFigma,
 		color: "#fbbb07",
+	},
+	{
+		name: "Canva",
+		icon: SiCanva,
+		color: "#21759b",
 	},
 	{
 		name: "Git",
