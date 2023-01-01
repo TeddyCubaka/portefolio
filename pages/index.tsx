@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
 	const [scrollingIsHeigh, setScrollingIsHeigh] = useState<boolean>(false);
 
-	const [y, setY] = useState(window.scrollY);
+	const [y, setY] = useState(0);
 
 	const handleNavigation = useCallback(
 		(e: any) => {
