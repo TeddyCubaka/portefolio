@@ -1,0 +1,13 @@
+{
+	"name": "Teddy Cubaka",
+	"short_name": "Teddy",
+	"start_url": "/",
+	"display": "fullscreen",
+	"icons": [
+		{
+			"src": "../components/images/logo.ico",
+			"type": "image/ico",
+			"sizes": "192x192"
+		}
+	]
+}

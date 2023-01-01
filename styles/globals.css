@@ -168,9 +168,6 @@ section {
 	flex-direction: column;
 	justify-content: space-between;
 }
-.descriptive_icon {
-	color: #fff;
-}
 .active-descriptive_button_card {
 	background-color: #1e736e;
 	color: white;
@@ -264,6 +261,18 @@ footer {
 	background-color: #d9d9d9;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.go_up_button {
+	background-color: #123853;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	position: fixed;
+	right: 20px;
+	bottom: 30px;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }

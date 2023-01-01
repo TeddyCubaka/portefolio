@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { BsTelephone, BsCheckCircleFill } from "react-icons/bs";
-import { BiMenu, BiCaretRight } from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
 import { FiCopy } from "react-icons/fi";
 import { TfiClose } from "react-icons/tfi";
 
@@ -18,7 +17,7 @@ const Media = () => {
 	});
 
 	return (
-		<div className={buttonClass}>
+		<div className={buttonClass} id="navBar">
 			<div
 				onClick={() => {
 					if (buttonClass === "navigations_mobile") {
@@ -93,8 +92,6 @@ const Media = () => {
 };
 
 export default function Navbar() {
-	const router = useRouter();
-
 	return (
 		<div className="navbar">
 			<h1 onClick={() => console.log(window.matchMedia("(max-width : 800px)"))}>

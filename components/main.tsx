@@ -1,9 +1,11 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Image from "next/image";
 import image from "./images/teddy.jpg";
+import { BsChevronCompactDown } from "react-icons/bs";
+
 export default function Main() {
 	return (
-		<main className="site_main">
+		<header className="site_main" id="header">
 			<div className="main_image">
 				<Image
 					src={image}
@@ -30,6 +32,9 @@ export default function Main() {
 					<BsLinkedin size="30" />{" "}
 				</a>
 			</div>
-		</main>
+			<a href="#about" style={{ color: "black" }}>
+				<BsChevronCompactDown size="25" />
+			</a>
+		</header>
 	);
 }
