@@ -59,11 +59,7 @@ const Media = () => {
 						onClick={() => setButtonClass("navigations_mobile")}>
 						Compétences
 					</a>
-					<div
-						className="navigations_contents"
-						onClick={() => {
-							navigator.clipboard.writeText("+243 995 867 384");
-						}}>
+					<div className="navigations_contents">
 						+243 995 867 384{" "}
 						<button
 							onClick={() => {
@@ -92,6 +88,12 @@ const Media = () => {
 };
 
 export default function Navbar() {
+	const [showContacts, setShowContacts] = useState(false);
+	const [copy, setCopy] = useState<CopyType>({
+		mail: false,
+		phone: false,
+	});
+
 	return (
 		<div className="navbar">
 			<h1 onClick={() => console.log(window.matchMedia("(max-width : 800px)"))}>
@@ -103,9 +105,39 @@ export default function Navbar() {
 				<a href="#career">parcours</a>
 				<a href="#skills">Compétences</a>
 				<a href="#comments">commentaires</a>
-				<button>
+				<button
+					onClick={() => {
+						if (!showContacts) setShowContacts(true);
+						else setShowContacts(false);
+					}}>
 					<BsTelephone size="34px" />
 				</button>
+				{showContacts ? (
+					<div className="contacts_shown">
+						<div className="">
+							+243 995 867 384{" "}
+							<button
+								onClick={() => {
+									navigator.clipboard.writeText("+243 995 867 384");
+									setCopy({ ...copy, phone: true });
+									setTimeout(() => setCopy({ ...copy, phone: false }), 2000);
+								}}>
+								{copy.phone ? <BsCheckCircleFill /> : <FiCopy />}
+							</button>
+						</div>
+						<div className="">
+							teddycubaka96@gmail.com{" "}
+							<button
+								onClick={() => {
+									navigator.clipboard.writeText("teddycubaka96@gmail.com");
+									setCopy({ ...copy, mail: true });
+									setTimeout(() => setCopy({ ...copy, mail: false }), 2000);
+								}}>
+								{copy.mail ? <BsCheckCircleFill /> : <FiCopy />}
+							</button>
+						</div>
+					</div>
+				) : null}
 			</nav>
 			<Media />
 		</div>
