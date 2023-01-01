@@ -41,32 +41,6 @@ function HandelDescriptionLength({ string }: HandelDescriptionLengthProps) {
 	);
 }
 
-interface GetLanguagesProps {
-	url: string;
-	defaultLanguage: string;
-}
-
-function GetLanguages({ url, defaultLanguage }: GetLanguagesProps) {
-	const [languages, setLanguages] = useState<string>(defaultLanguage);
-
-	const octokit = new Octokit({
-		auth: "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",
-	});
-
-	octokit
-		.request("GET " + url.split("https://api.github.com")[1], {})
-		.then((res) => {
-			let lang: string = "";
-			Object.keys(res.data).map((language) => {
-				lang += language + " ";
-			});
-			setLanguages(lang);
-		})
-		.catch((err) => console.log(err));
-
-	return <span> {languages} </span>;
-}
-
 export default function Achievement() {
 	const [repoLink, setRepoLink] = useState<string>("#");
 
@@ -106,11 +80,7 @@ export default function Achievement() {
 									<div className="sub_info_repo_card small">
 										<div>
 											{" "}
-											<b>languages : </b>{" "}
-											<GetLanguages
-												url={repo.languages_url}
-												defaultLanguage={repo.language ? repo.language : "_"}
-											/>
+											<b>languages : </b> {repo.language ? repo.language : "_"}
 										</div>
 										<div>
 											crée le {new Date(repo.created_at).toLocaleDateString()}{" "}
