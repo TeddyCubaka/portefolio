@@ -20,7 +20,7 @@ export default function Home() {
 	const handleNavigation = useCallback(
 		(e: any) => {
 			const window = e.currentTarget;
-			if (y > window.screen.height) setScrollingIsHeigh(true);
+			if (y > (1 / 2) * window.screen.height) setScrollingIsHeigh(true);
 			else setScrollingIsHeigh(false);
 
 			setY(window.scrollY);
