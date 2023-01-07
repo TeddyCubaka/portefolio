@@ -49,7 +49,10 @@ export default function Career() {
 						))}
 					</div>
 					<div className="about_descriptive_card">
-						<span> {careerArray[currentCareerId].name} </span>
+						<span>
+							{" "}
+							{"> "} {careerArray[currentCareerId].name}{" "}
+						</span>
 						<div> {careerArray[currentCareerId].content} </div>
 					</div>
 				</div>
