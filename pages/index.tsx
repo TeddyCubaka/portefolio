@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import Navbar from "../components/navbar";
 import Main from "../components/main";
 import About from "../components/about";
@@ -9,8 +8,6 @@ import Career from "../components/career";
 import Footer from "../components/footer";
 import { BiArrowToTop } from "react-icons/bi";
 import { useCallback, useEffect, useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 	const [scrollingIsHeigh, setScrollingIsHeigh] = useState<boolean>(false);
@@ -47,6 +44,7 @@ export default function Home() {
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
+				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
 			<main>
 				<Navbar />

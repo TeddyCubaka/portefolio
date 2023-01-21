@@ -14,7 +14,7 @@ export default function Main() {
 					height="300"
 				/>
 			</div>
-			<h1>Teddy Cubaka BIRHINGINGWA</h1>
+			<h1>Teddy BIRHINGINGWA Cubaka</h1>
 			<div>Développeur fullstack</div>
 			<div className="main_icons">
 				<a

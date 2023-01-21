@@ -141,4 +141,7 @@
 	.skill_card > svg {
 		width: 30px;
 	}
+	.site_main > h1 {
+		text-align: center;
+	}
 }
