@@ -104,7 +104,6 @@ export default function Navbar() {
 				<a href="#achievements">Réalisations</a>
 				<a href="#career">parcours</a>
 				<a href="#skills">Compétences</a>
-				<a href="#comments">commentaires</a>
 				<button
 					onClick={() => {
 						if (!showContacts) setShowContacts(true);

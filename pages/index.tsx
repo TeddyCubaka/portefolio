@@ -40,11 +40,12 @@ export default function Home() {
 				<title>Teddy Cubaka</title>
 				<meta
 					name="description"
-					content="Bienvenue sur le portfolio de Teddy Cubaka. Un développeur de Kinshasa-RD Congo."
+					content="Teddy Cubaka est Un développeur web et web mobile de Kinshasa-RD Congo. Teddy, un développeur fullstack, peut concevoir des systèmes information, développer des solutions web et bien plus. "
 				/>
+				<meta name="title" content="Portefolio developpeur fullstack" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
-				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+				<link rel="icon" href="favicon.ico" />
+				<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 			</Head>
 			<main>
 				<Navbar />
