@@ -9,7 +9,7 @@ export default function Main() {
 			<div className="main_image">
 				<Image
 					src={image}
-					alt="Picture of the Teddy Cubaka"
+					alt="Teddy Cubaka"
 					width="225"
 					height="300"
 				/>
