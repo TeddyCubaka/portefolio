@@ -10,7 +10,7 @@ function Skill({ name, Icon, color }: LocalProps) {
 	return (
 		<div className="skill_card">
 			<Icon color={color} size="50" />
-			<span> {name} </span>
+			<span style={{ textAlign: "center" }}> {name} </span>
 		</div>
 	);
 }

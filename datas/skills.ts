@@ -20,10 +20,22 @@ import {
 	SiVisualstudiocode,
 	SiMicrosoftexcel,
 	SiMicrosoftword,
-	SiGoogle,
+	SiDiscord,
 	SiLinux,
 	SiUbuntu,
 	SiCanva,
+	SiPython,
+	SiDjango,
+	SiSqlite,
+	SiGitlab,
+	SiGmail,
+	SiSlack,
+	SiGoogledrive,
+	SiGooglesheets,
+	SiGooglecalendar,
+	SiGooglechrome,
+	SiFirefox,
+	SiGooglekeep,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -60,19 +72,14 @@ const skills: LocalData[] = [
 		color: "#8993be",
 	},
 	{
+		name: "Python",
+		icon: SiPython,
+		color: "#346fa0",
+	},
+	{
 		name: "Node.js",
 		icon: FaNodeJs,
 		color: "#3c873a ",
-	},
-	{
-		name: "Passport.js",
-		icon: SiPassport,
-		color: "#000000",
-	},
-	{
-		name: "socket.io",
-		icon: SiSocketdotio,
-		color: "#000000",
 	},
 	{
 		name: "React.js",
@@ -87,6 +94,21 @@ const skills: LocalData[] = [
 	{
 		name: "next.js",
 		icon: SiNextdotjs,
+		color: "#000000",
+	},
+	{
+		name: "Django",
+		icon: SiDjango,
+		color: "#003c2a",
+	},
+	{
+		name: "Passport.js",
+		icon: SiPassport,
+		color: "#000000",
+	},
+	{
+		name: "socket.io",
+		icon: SiSocketdotio,
 		color: "#000000",
 	},
 	{
@@ -110,14 +132,19 @@ const skills: LocalData[] = [
 		color: "#f34f29",
 	},
 	{
-		name: "MySQL",
-		icon: SiMysql,
-		color: "#667ef4",
-	},
-	{
 		name: "Github",
 		icon: BsGithub,
 		color: "#000000",
+	},
+	{
+		name: "Gitlab",
+		icon: SiGitlab,
+		color: "#db4128",
+	},
+	{
+		name: "Mongodb",
+		icon: SiMongodb,
+		color: "#049024",
 	},
 	{
 		name: "SQL",
@@ -125,9 +152,14 @@ const skills: LocalData[] = [
 		color: "#081c7b",
 	},
 	{
-		name: "Mongodb",
-		icon: SiMongodb,
-		color: "#049024",
+		name: "MySQL",
+		icon: SiMysql,
+		color: "#667ef4",
+	},
+	{
+		name: "Sqlite",
+		icon: SiSqlite,
+		color: "#003a55",
 	},
 	{
 		name: "Ms Excel",
@@ -140,6 +172,16 @@ const skills: LocalData[] = [
 		color: "#1B5EBE",
 	},
 	{
+		name: "Google Sheet",
+		icon: SiGooglesheets,
+		color: "#1d9e5f",
+	},
+	{
+		name: "Google keep",
+		icon: SiGooglekeep,
+		color: "#edae00",
+	},
+	{
 		name: "A. Illustrator",
 		icon: SiAdobeillustrator,
 		color: "#49021F",
@@ -150,9 +192,29 @@ const skills: LocalData[] = [
 		color: "#001E36",
 	},
 	{
+		name: "Gmail",
+		icon: SiGmail,
+		color: "#e34133",
+	},
+	{
+		name: "Slack",
+		icon: SiSlack,
+		color: "#481449",
+	},
+	{
+		name: "Discord",
+		icon: SiDiscord,
+		color: "#565def",
+	},
+	{
 		name: "Asana",
 		icon: SiAsana,
 		color: "#F06A6A",
+	},
+	{
+		name: "Calendar",
+		icon: SiGooglecalendar,
+		color: "#0061cd",
 	},
 	{
 		name: "Vs Code",
@@ -160,9 +222,19 @@ const skills: LocalData[] = [
 		color: "#0078d7",
 	},
 	{
-		name: "Google Tools",
-		icon: SiGoogle,
-		color: "#00C9FF",
+		name: "Google drive",
+		icon: SiGoogledrive,
+		color: "#00a745",
+	},
+	{
+		name: "Chrome",
+		icon: SiGooglechrome,
+		color: "#dc392d",
+	},
+	{
+		name: "Mozilla firefox",
+		icon: SiFirefox,
+		color: "#d25424",
 	},
 	{
 		name: "Ubuntu",

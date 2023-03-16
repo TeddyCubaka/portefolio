@@ -241,6 +241,7 @@ section {
 	border: 1px solid #123853;
 	border-radius: 5px;
 	margin: 20px;
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
