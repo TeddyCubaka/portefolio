@@ -44,7 +44,6 @@ export default function Home() {
 				/>
 				<meta name="title" content="Portefolio developpeur fullstack" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="favicon.ico" />
 				<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 			</Head>
 			<main>

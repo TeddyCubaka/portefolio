@@ -1,0 +1,82 @@
+[
+	{
+		"name": "Quiz App",
+		"description": "Ceci est une mini quiz sur les connaissances basiques javascript.",
+		"type": "Monopage",
+		"technologie": "HTML, CSS, Vanilla Javascript",
+		"link": "https://teddycubaka.github.io/Quiz-App/",
+		"sourceCode": "https://github.com/TeddyCubaka/Quiz-App",
+		"frame": "Pédagogique",
+		"status": "en dev"
+	},
+	{
+		"name": "Pseudo coding",
+		"description": "Faites d'être un hacker. Écrivez tous ce que vous voulez et allez plus loin",
+		"type": "Monopage",
+		"technologie": "HTML, CSS, Vanilla Javascript",
+		"link": " https://teddycubaka.github.io/pseudo-code/",
+		"sourceCode": "https://github.com/TeddyCubaka/pseudo-code",
+		"frame": "Exercice",
+		"status": "en dev"
+	},
+	{
+		"name": "Carnet de contacts",
+		"description": "Créer des pseudo contacts. Créez-les, modifiez-les et supprimez-les",
+		"type": "Monopage",
+		"technologie": "HTML, CSS, Vanilla Javascript",
+		"link": "teddycubaka.github.io/page-contact/",
+		"sourceCode": "https://github.com/TeddyCubaka/page-contact.git",
+		"frame": "Pédagogique",
+		"status": "en dev"
+	},
+	{
+		"name": "Dot-it",
+		"description": "Une application des musiques en streaming utilisant l'api de spotify",
+		"type": "Pédagogique et personnelle",
+		"technologie": "React js (create react app), api-rest",
+		"link": "https://dot-it.vercel.app",
+		"sourceCode": "https://github.com/TeddyCubaka/dot-it.git",
+		"frame": "Pédagogique et personnel",
+		"status": "en dev"
+	},
+	{
+		"name": "Daily algorithm",
+		"description": "Un repository des codes où contenant la résolutions des algorithmes que je résouds régulièrement.",
+		"type": "Code",
+		"technologie": "Python et Typescript",
+		"link": "",
+		"sourceCode": "https://github.com/TeddyCubaka/daily-algorithm.git",
+		"frame": "Exercice",
+		"status": "edition"
+	},
+	{
+		"name": "Kisodo app",
+		"description": "Cette application gère le chat en temps réel. Il peut-être comparer à whatsapp. Ceci est la partie client.",
+		"type": "Application web",
+		"technologie": "React (create-react-app), socket-io et cloudinary",
+		"link": "",
+		"sourceCode": "https://github.com/TeddyCubaka/kisodo_app-chat_app-frontend",
+		"frame": "Pédagogique",
+		"status": "en dev"
+	},
+	{
+		"name": "Kisodo app server",
+		"description": "Application serveur de kisodo app. Il gère l'accès à la base de donnée, l'inscription et l'authentification.",
+		"type": "Application serveur",
+		"technologie": "Node.js, express.js, socket.io, mongodb.",
+		"link": "",
+		"sourceCode": "https://github.com/TeddyCubaka/kisodo-app_chat-app_backend.git",
+		"frame": "Pédagogique",
+		"status": "en dev"
+	},
+	{
+		"name": "Teddy Cubaka",
+		"description": "Voici les codes sources de l'actuelle page ou vous êtes. Ceci est mon portefolio.",
+		"type": "Application web",
+		"technologie": "Next.js, typescript",
+		"link": "https://teddycubaka.vercel.app/",
+		"sourceCode": "https://github.com/TeddyCubaka/portefolio.git",
+		"frame": "Professionnel",
+		"status": "en prod"
+	}
+]

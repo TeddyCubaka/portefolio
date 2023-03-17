@@ -1,38 +1,49 @@
-import Image from "next/image";
-import PropTypes, { InferProps } from "prop-types";
+import React from "react";
+import { RiCodeSLine } from "react-icons/ri";
+import { IoOpenOutline } from "react-icons/io5";
 
-export default function AchievementCard({
-	name,
-	link,
-	description,
-	duration,
-	image,
-}: InferProps<typeof AchievementCard.propTypes>) {
+interface Achievement {
+	achievement: {
+		name: string;
+		description: string;
+		type: string;
+		technologie: string;
+		link: string;
+		sourceCode: string;
+		frame: string;
+		status: string;
+	};
+}
+
+type LocalStatus = {
+	status: string;
+};
+
+export default function AchievementCard({ achievement }: Achievement) {
 	return (
 		<div className="achievement_card">
-			<div className="achievement_description">
-				<a href={link} className="strong">
-					{name}
-				</a>
-				<div>{description}</div>
-				<sub className="blue_color">{duration}</sub>
+			<div className="space_between w_max">
+				<div className="meddium base_center color_blue">
+					{" "}
+					{achievement.name}{" "}
+				</div>
+				<span className="status small">{achievement.status}</span>
 			</div>
-			<div className="achievement_img">
-				<Image
-					src={image}
-					alt="Picture of the author"
-					width="184"
-					height="184"
-				/>
+			<div className="w_max"> {achievement.description} </div>
+			<div className="space_around w_max">
+				<a className="txt_center" href={achievement.sourceCode}>
+					{" "}
+					<IoOpenOutline /> Site web
+				</a>
+				<a className="txt_center" href={achievement.link}>
+					{" "}
+					<RiCodeSLine /> Code source
+				</a>
+			</div>
+			<div className="space_between small w_max">
+				<span> {achievement.technologie} </span>
+				<span className="color_blue meddium"> {achievement.frame} </span>
 			</div>
 		</div>
 	);
 }
-
-AchievementCard.propTypes = {
-	name: PropTypes.string,
-	link: PropTypes.string.isRequired,
-	description: PropTypes.string,
-	duration: PropTypes.string,
-	image: PropTypes.string.isRequired,
-};
