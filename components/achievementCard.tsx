@@ -31,11 +31,18 @@ export default function AchievementCard({ achievement }: Achievement) {
 			</div>
 			<div className="w_max"> {achievement.description} </div>
 			<div className="space_around w_max">
+				{achievement.link.length > 1 ? (
+					<a className="txt_center" href={achievement.link}>
+						{" "}
+						<IoOpenOutline /> Site web
+					</a>
+				) : (
+					<span>
+						<IoOpenOutline />
+						Site indisponible
+					</span>
+				)}
 				<a className="txt_center" href={achievement.sourceCode}>
-					{" "}
-					<IoOpenOutline /> Site web
-				</a>
-				<a className="txt_center" href={achievement.link}>
 					{" "}
 					<RiCodeSLine /> Code source
 				</a>

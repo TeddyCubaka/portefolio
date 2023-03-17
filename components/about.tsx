@@ -1,35 +1,7 @@
-import React, { ReactElement, useContext, useState } from "react";
-import { BsLaptop } from "react-icons/bs";
-import { BiMobileAlt } from "react-icons/bi";
-import { MdDesignServices } from "react-icons/md";
-import data from "../datas/about.json";
+import React, { useState } from "react";
 import currentIdContext from "../context/aboutContext";
-
-export interface LocalProps {
-	icon: ReactElement;
-	title: string;
-	id: number;
-	mobileTitle: string;
-}
-
-function DescriptiveButton({ icon, title, id, mobileTitle }: LocalProps) {
-	const { currentId, setCurrentId } = useContext(currentIdContext);
-	return (
-		<div
-			className={
-				currentId === id
-					? "descriptive_button active-descriptive_button_card"
-					: "descriptive_button"
-			}
-			onClick={() => {
-				setCurrentId(id);
-			}}>
-			<div className="descriptive_icon">{icon}</div>
-			<div className="strong hide_on_mobile"> {title} </div>
-			<div className="strong hide_on_desktop"> {mobileTitle} </div>
-		</div>
-	);
-}
+import { aboutDetails } from "../datas/about";
+import { DescriptiveButton } from "./career";
 
 export default function About() {
 	const [currentId, setCurrentId] = useState(0);
@@ -39,57 +11,26 @@ export default function About() {
 				<h2>Que fait Teddy ?</h2>
 				<div className="about_details">
 					<div className="descriptive_button_card">
-						<DescriptiveButton
-							title={data.web.title}
-							id={data.web.id}
-							icon={<BsLaptop size="25" />}
-							mobileTitle={data.web.mobileTitle}
-						/>
-						<DescriptiveButton
-							title={data.mobile.title}
-							id={data.mobile.id}
-							icon={<BiMobileAlt size="25" />}
-							mobileTitle={data.mobile.mobileTitle}
-						/>
-						<DescriptiveButton
-							title={data.design.title}
-							id={data.design.id}
-							icon={<MdDesignServices size="25" />}
-							mobileTitle={data.design.mobileTitle}
-						/>
+						{aboutDetails.map((about) => (
+							<DescriptiveButton
+								context={currentIdContext}
+								description={about}
+								key={about.id + about.name}
+							/>
+						))}
 					</div>
 					<div className="about_descriptive_card">
+						<p>
+							{`>   `}
+							{aboutDetails[currentId].name}
+						</p>
+						<div>{aboutDetails[currentId].content}</div>
 						<span>
-							{" "}
-							{`>   `}{" "}
-							{currentId === 0
-								? data.web.title
-								: currentId === 1
-								? data.mobile.title
-								: currentId === 2
-								? data.design.title
-								: null}{" "}
-						</span>
-						<div>
-							{" "}
-							{currentId === 0
-								? data.web.description
-								: currentId === 1
-								? data.mobile.description
-								: currentId === 2
-								? data.design.description
-								: null}{" "}
-						</div>
-						<sub>
 							<strong> Technologies : </strong>
-							{currentId === 0
-								? data.web.skills
-								: currentId === 1
-								? data.mobile.skills
-								: currentId === 2
-								? data.design.skills
-								: null}{" "}
-						</sub>
+							{aboutDetails[currentId].subContent
+								? aboutDetails[currentId].subContent
+								: ""}
+						</span>
 					</div>
 				</div>
 			</section>

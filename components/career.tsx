@@ -1,59 +1,58 @@
 import React, { ReactElement, useContext, useState } from "react";
-import careerArray from "../datas/career";
+import careerArray, { DescriptiveButton } from "../datas/career";
 import careerContext from "../context/careerContext";
 
 export interface LocalProps {
-	icon: ReactElement;
-	title: string;
-	id: number;
-	mobileTitle: string;
+	description: DescriptiveButton;
+	context: React.Context<any>;
 }
 
-function DescriptiveButton({ icon, title, id, mobileTitle }: LocalProps) {
-	const career = useContext(careerContext);
+export function DescriptiveButton({ description, context }: LocalProps) {
+	const career = useContext(context);
 	return (
 		<div
 			className={
-				career.currentCareerId === id
+				career.currentId === description.id
 					? "descriptive_button active-descriptive_button_card"
 					: "descriptive_button"
 			}
 			onClick={() => {
-				career.setCurrentCareerId(id);
+				career.setCurrentId(description.id);
 			}}>
-			<div className="descriptive_icon">{icon}</div>
-			<div className="strong hide_on_mobile"> {title} </div>
-			<div className="strong hide_on_desktop"> {mobileTitle} </div>
+			<div className="descriptive_icon">
+				{" "}
+				<description.icon />{" "}
+			</div>
+			<div className="strong hide_on_mobile"> {description.name} </div>
+			<div className="strong hide_on_desktop"> {description.mobileName} </div>
 		</div>
 	);
 }
 
 export default function Career() {
-	const [currentCareerId, setCurrentCareerId] = useState(0);
+	const [currentId, setCurrentId] = useState(0);
 
 	return (
-		<careerContext.Provider value={{ currentCareerId, setCurrentCareerId }}>
+		<careerContext.Provider value={{ currentId, setCurrentId }}>
 			<section className="about_card" id="career">
 				<span></span>
-				<h2>Que fait Teddy ?</h2>
+				<h2>Et le parcours de Teddy ?</h2>
 				<div className="about_details">
 					<div className="descriptive_button_card">
 						{careerArray.map((data) => (
 							<DescriptiveButton
-								icon={<data.icon />}
-								title={data.name}
-								id={data.id}
+								context={careerContext}
+								description={data}
 								key={data.id}
-								mobileTitle={data.mobileName}
 							/>
 						))}
 					</div>
 					<div className="about_descriptive_card">
 						<span>
 							{" "}
-							{"> "} {careerArray[currentCareerId].name}{" "}
+							{"> "} {careerArray[currentId].name}{" "}
 						</span>
-						<div> {careerArray[currentCareerId].content} </div>
+						<div> {careerArray[currentId].content} </div>
 					</div>
 				</div>
 			</section>

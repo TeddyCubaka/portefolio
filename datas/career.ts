@@ -2,15 +2,16 @@ import { IconType } from "react-icons";
 import { TbSchoolOff, TbSchool } from "react-icons/tb";
 import { MdWorkOutline } from "react-icons/md";
 
-interface LocalDataType {
+export interface DescriptiveButton {
 	id: number;
 	name: string;
 	icon: IconType;
 	content: string;
 	mobileName: string;
+	subContent?: string;
 }
 
-const careerArray: LocalDataType[] = [
+const careerArray: DescriptiveButton[] = [
 	{
 		id: 0,
 		name: "Scolaire",
@@ -32,7 +33,7 @@ const careerArray: LocalDataType[] = [
 		name: "Professionnelle",
 		icon: MdWorkOutline,
 		content:
-			"Dans le domaine de dévéloppement web, Teddy a, jusque là, travaillé chez Kinshasa Digital Academy en tant que développeur fullstack. Dans le domaine de comminuty mangement, il l'a généralement fait à la maison Jacqueline, une maison des production des jus naturels à Kinshasa.",
+			"Dans le domaine de dévéloppement web, Teddy a, travaillé chez Kinshasa Digital Academy en tant que développeur fullstack et chez Brainsoft corporation en tant developpeur backend. Dans le domaine de comminuty mangement, il l'a généralement fait à la maison Jacqueline, une maison des production des jus naturels à Kinshasa.",
 		mobileName: "Profession.",
 	},
 ];
