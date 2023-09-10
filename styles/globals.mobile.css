@@ -1,175 +1,209 @@
 @media only screen and (max-width: 800px) {
-	body {
-		margin: 0%;
-		padding: 0%;
-		width: 100%;
-		font-size: 14px;
-		font-family: "Roboto", sans-serif;
-		font-weight: 300;
-	}
+  body {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
 
-	.strong {
-		font-weight: 400;
-		font-size: 14px;
-	}
+  .strong {
+    font-weight: 400;
+    font-size: 14px;
+  }
 
-	.navbar {
-		height: 70px;
-		z-index: 5;
-	}
+  .navbar {
+    height: 70px;
+    z-index: 5;
+  }
 
-	.navbar > h1 {
-		margin-left: 10px;
-		font-size: 20px;
-	}
+  .navbar > h1 {
+    margin-left: 10px;
+    font-size: 20px;
+  }
 
-	.hide_on_mobile {
-		display: none;
-	}
+  .hide_on_mobile {
+    display: none;
+  }
 
-	.hide_on_desktop {
-		display: inline;
-	}
+  .hide_on_desktop {
+    display: inline;
+  }
 
-	.navigations {
-		display: none;
-		margin-right: 20px;
-	}
+  .navigations {
+    display: none;
+    margin-right: 20px;
+  }
 
-	.navigations_mobile {
-		display: flex;
-		flex-direction: column;
-	}
+  .navigations_mobile {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.navigations_mobile > div {
-		margin-right: 5px;
-		background-color: transparent;
-	}
+  .navigations_mobile > div {
+    margin-right: 5px;
+    background-color: transparent;
+  }
 
-	.navigations_mobile > div > .sidebar {
-		display: none;
-	}
+  .navigations_mobile > div > .sidebar {
+	position: absolute;
+    left: -10px;
+    top: 0vh;
+    height: 99.8vh;
+    width: 0;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+	overflow: hidden;
+	animation: sidebar 1.2s;
+	animation: sidebar_closed 1.3s;
+  }
 
-	.navigations_mobile_focus > div > .sidebar {
-		position: absolute;
+  @keyframes sidebar_closed {
+    from {
 		left: 0;
-		top: 0vh;
-		height: 99.8vh;
 		width: 80vw;
-		background-color: #f5f5f5;
-		font-size: 16px;
-		box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
-		display: flex;
-		flex-direction: column;
-	}
+    }
+    to {
+		left: 0;
+		width: 0;
+    }
+  }
 
-	.navigations_mobile > div > p {
-		position: absolute;
-	}
+  .navigations_mobile_focus > div > .sidebar {
+    position: absolute;
+    left: 0;
+    top: 0vh;
+    height: 99.8vh;
+    width: 80vw;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+	overflow: hidden;
+	animation: sidebar 1.2s;
+  }
 
-	.navigations_mobile_focus > div > p {
-		position: absolute;
-		width: 20vw;
-		height: 100vh;
-		top: -15px;
-		right: 0;
-		background-color: #12385334;
-	}
+  @keyframes sidebar {
+    from {
+		width: 0;
+    }
+    to {
+		width: 80vw;
+    }
+  }
 
-	.navigations_contents {
-		height: 50px;
-		color: #123853;
-		text-decoration: none;
-		padding-left: 20px;
-		padding-right: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+  .navigations_mobile > div > p {
+    position: absolute;
+  }
 
-	.navigations_contents:visited {
-		color: #123853;
-	}
+  .navigations_mobile_focus > div > p {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: -15px;
+    right: 0;
+    background-color: #12385334;
+  }
 
-	.navigations_contents:hover {
-		background-color: #d9d9d9;
-	}
+  .navigations_contents {
+    height: 50px;
+    color: #123853;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-	.menu_closer {
-		height: 40px;
-		text-align: right;
-		margin: 10px 10px 0 0;
-	}
+  .navigations_contents:visited {
+    color: #123853;
+  }
 
-	.about_card {
-		padding: 20px;
-		min-height: 200px;
-	}
+  .navigations_contents:hover {
+    background-color: #d9d9d9;
+  }
 
-	.about_details {
-		height: 100%;
-		display: grid;
-		grid-template-columns: 1fr;
-	}
+  .menu_closer {
+    height: 40px;
+    text-align: right;
+    margin: 10px 10px 0 0;
+  }
 
-	.descriptive_button {
-		border-radius: 3px;
-		width: 100%;
-		padding: 0 10px 0 0;
-		border: 1px solid #1e736e;
-		z-index: 1;
-	}
-	
-	.descriptive_icon {
-		height: 25px;
-		margin: 0 0px 0 0;
-		border-radius: 3px;
-		background-color: #f5f5f5;
-	}
-	
-	.descriptive_icon > svg {
-		width: 20px;
-		color: #123853;
-	}
+  .about_card {
+    padding: 20px;
+    min-height: 200px;
+  }
 
-	.descriptive_button_card {
-		height: 100%;
-		margin: 10px 0px;
-		column-gap: 10px;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
+  .about_details {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-	.descriptive_icon {
-		color: #fff;
-	}
+  .descriptive_button {
+    border-radius: 3px;
+    width: 100%;
+    padding: 0 10px 0 0;
+    border: 1px solid #1e736e;
+    z-index: 1;
+  }
 
-	.active-descriptive_button_card {
-		background-color: #1e736e;
-		color: white;
-	}
+  .descriptive_icon {
+    height: 25px;
+    margin: 0 0px 0 0;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+  }
 
-	.active-descriptive_button_card > .descriptive_icon {
-		background-color: #1e736e;
-		color: white;
-	}
+  .descriptive_icon > svg {
+    width: 20px;
+    color: #123853;
+  }
 
-	.active-descriptive_button_card > .descriptive_icon > svg {
-		color: white;
-	}
+  .descriptive_button_card {
+    height: 100%;
+    margin: 10px 0px;
+    column-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-	.skill_card {
-		width: 90px;
-		height: 90px;
-		margin: 10px;
-	}
+  .descriptive_icon {
+    color: #fff;
+  }
 
-	.skill_card > svg {
-		width: 30px;
-	}
+  .active-descriptive_button_card {
+    background-color: #1e736e;
+    color: white;
+  }
 
-	.site_main > h1 {
-		text-align: center;
-	}
+  .active-descriptive_button_card > .descriptive_icon {
+    background-color: #1e736e;
+    color: white;
+  }
+
+  .active-descriptive_button_card > .descriptive_icon > svg {
+    color: white;
+  }
+
+  .skill_card {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+  }
+
+  .skill_card > svg {
+    width: 30px;
+  }
+
+  .site_main > h1 {
+    text-align: center;
+  }
 }
