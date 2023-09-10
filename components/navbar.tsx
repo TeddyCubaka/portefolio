@@ -3,6 +3,7 @@ import { BsTelephone, BsCheckCircleFill } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
 import { FiCopy } from "react-icons/fi";
 import { TfiClose } from "react-icons/tfi";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 interface CopyType {
   mail: boolean;
@@ -37,13 +38,19 @@ const Media = () => {
             {" "}
             <TfiClose size="25" />{" "}
           </div>
-          <a
-            href="#about"
+          <Link
+            activeClass="active"
+            to="about"
+            style={{ color: "black" }}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
             className="navigations_contents"
             onClick={() => setButtonClass("navigations_mobile")}
           >
             A propos
-          </a>
+          </Link>
           <a
             href="#achievements"
             className="navigations_contents"
@@ -105,10 +112,46 @@ export default function Navbar() {
         Teddy Cubaka
       </h1>
       <nav className="navigations">
-        <a href="#about">A propos</a>
-        <a href="#achievements">Réalisations</a>
-        <a href="#career">parcours</a>
-        <a href="#skills">Compétences</a>
+        <Link
+          to="about"
+          style={{ color: "black" }}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          A propos
+        </Link>{" "}
+        <Link
+          to="achievements"
+          style={{ color: "black" }}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Réalisations
+        </Link>{" "}
+        <Link
+          to="career"
+          style={{ color: "black" }}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          parcours
+        </Link>{" "}
+        <Link
+          to="skills"
+          style={{ color: "black" }}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Compétences
+        </Link>
         <button
           onClick={() => {
             if (!showContacts) setShowContacts(true);

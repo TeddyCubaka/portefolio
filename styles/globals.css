@@ -63,6 +63,10 @@ section {
 	display: flex;
 	align-items: center;
 }
+.navigations > a {
+	color: #123853;
+	font-weight: 400;
+}
 .navigations > button {
 	background-color: white;
 	height: 54px;
