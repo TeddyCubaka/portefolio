@@ -207,18 +207,6 @@ section {
   row-gap: 20px;
   column-gap: 20px;
 }
-.skill_card {
-  width: 120px;
-  height: 120px;
-  border: 1px solid #123853;
-  border-radius: 5px;
-  margin: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
 .skills_section {
   display: flex;
   flex-wrap: wrap;

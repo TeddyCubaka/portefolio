@@ -193,12 +193,6 @@
     color: white;
   }
 
-  .skill_card {
-    width: 90px;
-    height: 90px;
-    margin: 10px;
-  }
-
   .skill_card > svg {
     width: 30px;
   }
