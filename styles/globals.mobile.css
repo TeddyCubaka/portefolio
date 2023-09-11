@@ -47,7 +47,7 @@
   }
 
   .navigations_mobile > div > .sidebar {
-	position: absolute;
+    position: absolute;
     left: -10px;
     top: 0vh;
     height: 99.8vh;
@@ -57,19 +57,19 @@
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-	overflow: hidden;
-	animation: sidebar 1.2s;
-	animation: sidebar_closed 1.3s;
+    overflow: hidden;
+    animation: sidebar 1.2s;
+    animation: sidebar_closed 1.3s;
   }
 
   @keyframes sidebar_closed {
     from {
-		left: 0;
-		width: 80vw;
+      left: 0;
+      width: 80vw;
     }
     to {
-		left: 0;
-		width: 0;
+      left: 0;
+      width: 0;
     }
   }
 
@@ -84,16 +84,16 @@
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-	overflow: hidden;
-	animation: sidebar 1.2s;
+    overflow: hidden;
+    animation: sidebar 1.2s;
   }
 
   @keyframes sidebar {
     from {
-		width: 0;
+      width: 0;
     }
     to {
-		width: 80vw;
+      width: 80vw;
     }
   }
 
@@ -205,5 +205,11 @@
 
   .site_main > h1 {
     text-align: center;
+  }
+  .descriptive_card {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }

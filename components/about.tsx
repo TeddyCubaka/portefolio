@@ -1,39 +1,44 @@
-import React, { useState } from "react";
-import currentIdContext from "../context/aboutContext";
+import React from "react";
+import { IconType } from "react-icons";
 import { aboutDetails } from "../datas/about";
-import { DescriptiveButton } from "./career";
+
+interface LocalSectionProps {
+  icon: IconType;
+  name: string;
+  content: string;
+  subContent?: string;
+}
+
+function LocalSection({ icon, name, content, subContent }: LocalSectionProps) {
+  const Icon = icon;
+  return (
+    <div className="h-fit w-full mx-5 grid grid-cols-[1fr_2.6fr] border-solid border-l-2 border-black py-5 max-md:flex max-md:flex-col max-md:py-0">
+      <div className="h-fit flex items-center gap-3 relative bottom-5 right-[22px] max-md:bottom-0">
+        <span className="h-fit text-white bg-[#1e736e] p-3 rounded-3xl">
+          <Icon size="20px" color="white" />
+        </span>
+        <span className="text-[#1e736e] text-xl font-bold ">{name}</span>
+      </div>
+
+      <div className="max-md:ml-8 max-md:mr-5">
+        <p>{content}</p>
+        <span className="block mt-2.5">
+          <strong> Technologies : </strong>
+          {subContent}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 export default function About() {
-	const [currentId, setCurrentId] = useState(0);
-	return (
-		<currentIdContext.Provider value={{ currentId, setCurrentId }}>
-			<section className="about_card" id="about">
-				<h2>Que fait Teddy ?</h2>
-				<div className="about_details">
-					<div className="descriptive_button_card">
-						{aboutDetails.map((about) => (
-							<DescriptiveButton
-								context={currentIdContext}
-								description={about}
-								key={about.id + about.name}
-							/>
-						))}
-					</div>
-					<div className="about_descriptive_card">
-						<p>
-							{`>   `}
-							{aboutDetails[currentId].name}
-						</p>
-						<div>{aboutDetails[currentId].content}</div>
-						<span>
-							<strong> Technologies : </strong>
-							{aboutDetails[currentId].subContent
-								? aboutDetails[currentId].subContent
-								: ""}
-						</span>
-					</div>
-				</div>
-			</section>
-		</currentIdContext.Provider>
-	);
+  return (
+    <section className="bg-[#F5F5F5] h-auto flex flex-col" id="about">
+      <h2 className="font-bold text-3xl mb-5 text-[#123853]">Que fait Teddy ?</h2>
+
+      <LocalSection {...aboutDetails[0]} />
+      <LocalSection {...aboutDetails[1]} />
+      <LocalSection {...aboutDetails[2]} />
+    </section>
+  );
 }
