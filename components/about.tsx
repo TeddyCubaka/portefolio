@@ -9,7 +9,12 @@ interface LocalSectionProps {
   subContent?: string;
 }
 
-function LocalSection({ icon, name, content, subContent }: LocalSectionProps) {
+export function LocalSection({
+  icon,
+  name,
+  content,
+  subContent,
+}: LocalSectionProps) {
   const Icon = icon;
   return (
     <div className="h-fit w-full mx-5 grid grid-cols-[1fr_2.6fr] border-solid border-l-2 border-black py-5 max-md:flex max-md:flex-col max-md:py-0">
@@ -22,10 +27,14 @@ function LocalSection({ icon, name, content, subContent }: LocalSectionProps) {
 
       <div className="max-md:ml-8 max-md:mr-5">
         <p>{content}</p>
-        <span className="block mt-2.5">
-          <strong> Technologies : </strong>
-          {subContent}
-        </span>
+        {subContent ? (
+          <span className="block mt-2.5">
+            <strong> Technologies : </strong>
+            {subContent}
+          </span>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
@@ -34,7 +43,9 @@ function LocalSection({ icon, name, content, subContent }: LocalSectionProps) {
 export default function About() {
   return (
     <section className="bg-[#F5F5F5] h-auto flex flex-col" id="about">
-      <h2 className="font-bold text-3xl mb-5 text-[#123853]">Que fait Teddy ?</h2>
+      <h2 className="font-bold text-3xl mb-5 text-[#123853]">
+        Que fait Teddy ?
+      </h2>
 
       <LocalSection {...aboutDetails[0]} />
       <LocalSection {...aboutDetails[1]} />
