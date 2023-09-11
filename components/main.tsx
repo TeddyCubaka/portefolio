@@ -10,8 +10,8 @@ export default function Main() {
       <div className="main_image">
         <Image src={image} alt="Teddy Cubaka" width="225" height="300" />
       </div>
-      <h1>Teddy BIRHINGINGWA Cubaka</h1>
-      <div>Développeur fullstack</div>
+      <h1 className="font-bold text-4xl text-[#123853]">Teddy BIRHINGINGWA Cubaka</h1>
+      <div className="text-lg">Développeur fullstack</div>
       <div className="main_icons">
         <a
           href="https://github.com/TeddyCubaka"

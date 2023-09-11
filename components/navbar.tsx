@@ -32,11 +32,10 @@ const Media = () => {
         <p onClick={() => setButtonClass("navigations_mobile")}></p>
         <div className="sidebar">
           <div
-            className="menu_closer"
+            className="w-full  m-3 pr-6 flex justify-end"
             onClick={() => setButtonClass("navigations_mobile")}
           >
-            {" "}
-            <TfiClose size="25" />{" "}
+            <TfiClose size="25" />
           </div>
           <Link
             activeClass="active"
@@ -107,8 +106,8 @@ export default function Navbar() {
   });
 
   return (
-    <div className="navbar">
-      <h1 onClick={() => console.log(window.matchMedia("(max-width : 800px)"))}>
+    <div className="navbar z-20">
+      <h1 className="font-bold text-3xl text-[#123853]" onClick={() => console.log(window.matchMedia("(max-width : 800px)"))}>
         Teddy Cubaka
       </h1>
       <nav className="navigations">
