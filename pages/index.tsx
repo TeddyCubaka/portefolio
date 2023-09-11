@@ -40,7 +40,7 @@ export default function Home() {
 				<title>Teddy Cubaka</title>
 				<meta
 					name="description"
-					content="Teddy Cubaka est Un développeur web et web mobile de Kinshasa-RD Congo. Teddy, un développeur fullstack, peut concevoir des systèmes information, développer des solutions web et bien plus. "
+					content="Teddy Cubaka est Un développeur web et web mobile de Kinshasa-RD Congo. Teddy, un développeur fullstack, peut concevoir des systèmes informatiques, développer des solutions web, des applications mobiles et bien plus. "
 				/>
 				<meta name="title" content="Portefolio developpeur fullstack" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
