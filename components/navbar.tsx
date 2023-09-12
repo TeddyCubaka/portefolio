@@ -106,7 +106,7 @@ export default function Navbar() {
   });
 
   return (
-    <div className="navbar z-20">
+    <div className="navbar z-20" id="navbar">
       <h1 className="font-bold text-3xl text-[#123853]" onClick={() => console.log(window.matchMedia("(max-width : 800px)"))}>
         Teddy Cubaka
       </h1>
