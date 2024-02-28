@@ -21,28 +21,29 @@ type LocalStatus = {
 
 export default function AchievementCard({ achievement }: Achievement) {
   return (
-    <div className="w-full h-auto border border-solid border-[#123853] flex flex-col items-center p-4 rounded-md ">
+    <div className="w-full h-auto border border-solid border-[#123853] flex flex-col items-center p-4 rounded-md max-md:gap-2.5">
       <div className="space_between w_max">
-        <div className="meddium base_center color_blue">
+        <div className="font-medium flex items-center text-[#123853]">
           {" "}
           {achievement.name}{" "}
         </div>
-        <span className="status small">{achievement.status}</span>
+
+        <span className="border border-[#123853cb] px-2 py-1 rounded-2xl flex items-center gap-2.5 text-sm hover:bg-[#123853cb] hover:text-white transition ease-in duration-500 cursor-default">{achievement.status}</span>
       </div>
       <div className="w_max"> {achievement.description} </div>
-      <div className="space_around w_max">
+      <div className="flex justify-between w-full">
         {achievement.link.length > 1 ? (
-          <a className="txt_center" href={achievement.link}>
+          <a className="w-full underline flex flex-row items-center justify-center gap-2 " href={achievement.link}>
             {" "}
             <IoOpenOutline /> Site web
           </a>
         ) : (
-          <span>
+          <span className="w-full flex flex-row items-center justify-center gap-2 ">
             <IoOpenOutline />
             Site indisponible
           </span>
         )}
-        <a className="txt_center" href={achievement.sourceCode}>
+        <a className="w-full underline flex flex-row items-center justify-center gap-2 " href={achievement.sourceCode}>
           {" "}
           <RiCodeSLine /> Code source
         </a>

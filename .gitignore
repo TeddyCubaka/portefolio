@@ -37,3 +37,4 @@ next-env.d.ts
 
 components/comment.tsx
 datas/comments.json
+node_modules

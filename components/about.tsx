@@ -25,7 +25,7 @@ export function LocalSection({
         <span className="text-[#1e736e] text-xl font-bold ">{name}</span>
       </div>
 
-      <div className="max-md:ml-8 max-md:mr-5">
+      <div className="max-md:ml-8 max-md:mr-5 pr-10 max-md:pr-1 max-md:text-justify">
         <p>{content}</p>
         {subContent ? (
           <span className="block mt-2.5">
