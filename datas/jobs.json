@@ -1,0 +1,90 @@
+[
+    {
+        "id": 0,
+        "compagny": "trans-academia",
+        "image": null,
+        "type": "stagiaire",
+        "tasks": [
+            "développement des apis",
+            "configuration du serveur",
+            "documentations des apis",
+            "mis à jour du système de travail pour les apis",
+            "mis à jour du pattern de développement des apis",
+            "configurations du système de CDI"
+        ],
+        "roles": [
+            "developpeur backend",
+            "devOps"
+        ],
+        "period": "octobre.2023 - aujourd'hui",
+        "achievements": [
+            "TAC Kelasi (apis)",
+            "TAC Inter-urbain (apis)",
+            "configuration de serveurs"
+        ],
+        "technologie": [
+            "php",
+            "mysql",
+            "slim",
+            "git",
+            "github",
+            "digital ocean"
+        ]
+    },
+    {
+        "id": 0,
+        "compagny": "domesticare",
+        "image": null,
+        "type": "consultant",
+        "tasks": [
+            "développent mobile",
+            "developpement des apis",
+            "conception de système",
+            "designer des applications mobiles",
+            "service d'IT"
+        ],
+        "roles": [
+            "developpeur mobile et backend",
+            "devOps",
+            "IT"
+        ],
+        "period": "juillet.2023 - septembre.2023",
+        "achievements": [
+            "Domesticare mobile application",
+            "ibnn car mobile application",
+            "conception et modélisation de ces deux application (système)",
+            "design des application"
+        ],
+        "technologie": [
+            "figma",
+            "uml",
+            "flutter",
+            "git",
+            "github"
+        ]
+    },
+    {
+        "id": 0,
+        "compagny": "brainsoft",
+        "image": null,
+        "type": "stagiaire",
+        "tasks": [
+            "développent web",
+            "developpement des apis"
+        ],
+        "roles": [
+            "developpeur fullstack"
+        ],
+        "period": "mars.2023 - juin.2023",
+        "achievements": [
+            "application serveur",
+            "deux applications web"
+        ],
+        "technologie": [
+            "django",
+            "django restframework",
+            "reactjs",
+            "redux"
+        ]
+    }
+]
