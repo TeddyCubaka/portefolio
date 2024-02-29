@@ -113,7 +113,7 @@ function Jobs() {
       <h4 className="font-bold text-xl mb-5 text-[#123853]">Parcours proffessionnels</h4>
       {
         jobsData.map((job) => (
-          <JobCard {...job} />
+          <JobCard {...job} key={job.id} />
         ))
       }
     </section>
