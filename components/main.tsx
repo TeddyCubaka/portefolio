@@ -6,7 +6,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Main() {
   return (
-    <header className="site_main" id="header">
+    <main className="site_main" id="header">
       <div className="main_image">
         <Image src={image} alt="Teddy Cubaka" width="225" height="300" />
       </div>
@@ -40,6 +40,6 @@ export default function Main() {
       >
         <BsChevronCompactDown size="25" />
       </Link>
-    </header>
+    </main>
   );
 }

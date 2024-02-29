@@ -1,4 +1,4 @@
-.ring:hover {
+.ring_ring:hover {
   animation: ring 2.4s infinite;
 }
 
@@ -6,27 +6,35 @@
   0% {
     transform: rotate(30deg);
   }
+
   25% {
     transform: rotate(60deg);
   }
+
   27.5% {
     transform: rotate(30deg);
   }
+
   30% {
     transform: rotate(60deg);
   }
+
   32.5% {
     transform: rotate(30deg);
   }
+
   35% {
     transform: rotate(60deg);
   }
+
   37.5% {
     transform: rotate(30deg);
   }
+
   40% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(30deg);
   }

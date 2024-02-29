@@ -75,12 +75,16 @@ const JobDetails = ({ type, tasks, roles, achievements, technologie }: LocalSect
           :
           "..."
       }
-      <button
-        onClick={() => {
-          if (showMore) _setShowMore(false)
-          else _setShowMore(true)
-        }}
-        className="px-2 flex items-center gap-2 hover:font-semibold w-full justify-end">Show more <MdOutlineArrowRightAlt /> </button>
+      <div className="w-full flex justify-end">
+        <button
+          onClick={() => {
+            if (showMore) _setShowMore(false)
+            else _setShowMore(true)
+          }}
+          className="px-2 border border-[#123853] flex items-center gap-2 justify-end rounded-md hover:bg-[#123853cb] hover:text-white transition ease-in duration-500">
+          voir plus
+        </button>
+      </div>
     </div>
   )
 }
