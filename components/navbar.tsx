@@ -1,9 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { BsTelephone, BsCheckCircleFill } from "react-icons/bs";
-import { BiMenu } from "react-icons/bi";
 import { FiCopy } from "react-icons/fi";
-import { TfiClose } from "react-icons/tfi";
-import { Link, animateScroll as scroll } from "react-scroll";
 
 interface CopyType {
   mail: boolean;
@@ -40,10 +37,10 @@ export default function Navbar() {
   }, [handleNavigation]);
 
   return (
-    <header className={"bg-white w-full h-[10vh] max-md:h-[70px] text-[#123853] sticky top-0 flex justify-between z-20 px-5 items-center max-md:px-3 my-0" + (scrollHeight > 100 ? "shadow" : "")} id="navbar">
+    <header className={"bg-white w-full h-[10vh] max-md:h-[70px] text-[#123853] sticky top-0 flex justify-between z-20 px-5 items-center max-md:px-3 my-0" + (scrollHeight > 100 ? " shadow" : "")} id="navbar">
       <h1 className="font-bold text-3xl text-[#123853]">
         {scrollHeight > 100 ?
-          "Teddy Cubaka"
+          <span className="shower_animation">Teddy Cubaka</span>
           : ""}
       </h1>
       <div
